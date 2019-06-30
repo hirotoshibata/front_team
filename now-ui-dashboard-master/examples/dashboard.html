@@ -22,38 +22,47 @@
 
 <body class="">
   <div class="wrapper ">
-    <div class="sidebar" data-color="yellow">
-      <!--
-        Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
-    -->
-      <div class="logo">
-        <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-          Crazy
-        </a>
+
+
+    <!-- サイドバー開始 -->
+      <div class="sidebar" data-color="yellow">
+        <!--
+          Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
+      -->
+        <div class="logo" style="border-bottom: solid 1px white">
+          <a href="http://www.creative-tim.com" class="simple-text logo-normal">
+            Crazy
+          </a>
+        </div>
+        <div class="sidebar-wrapper" id="sidebar-wrapper">
+          <ul class="nav">
+            <li style="border-bottom: solid 1px white">
+              <a href="">
+                <h3><i class="now-ui-icons users_single-02"></i>ミルキー</h3>
+                <h3>今月の目標貯金額</h3>
+                <h1><i class="fas fa-yen-sign"></i>30000</h1>
+              </a>
+            </li>
+            <li class="active ">
+              <a href="./dashboard.html">
+                <i class="now-ui-icons design_app"></i>
+                <p>ホーム画面</p>
+              </a>
+            </li>
+            <li>
+              <a href="./notifications.html">
+                <i class="now-ui-icons ui-1_bell-53"></i>
+                <p>通知</p>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="sidebar-wrapper" id="sidebar-wrapper">
-        <ul class="nav">
-          <li class="active ">
-            <a href="./dashboard.html">
-              <i class="now-ui-icons design_app"></i>
-              <p>ホーム画面</p>
-            </a>
-          </li>
-          <li>
-            <a href="./notifications.html">
-              <i class="now-ui-icons ui-1_bell-53"></i>
-              <p>通知</p>
-            </a>
-          </li>
-          <li>
-            <a href="./user.html">
-              <i class="now-ui-icons users_single-02"></i>
-              <p>プロフィール</p>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <!-- サイドバー終了 -->
+
+
+
+
     <div class="main-panel" id="main-panel">
       <div class="panel-header panel-header-lg">
         <canvas id="bigDashboardChart"></canvas>
@@ -62,44 +71,37 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="card-deck">
-            <div class="card border-primary mb-3" style="height:350px">
-              <div>
-                <h3 class="card-header">貯金<i class="fas fa-wallet"></i></h3>
+              <div class="card border-primary mb-3" style="height:350px">
+                <div>
+                  <h3 class="card-header"><i class="fas fa-coins"></i>給料</h3>
+                </div>
+                  <div class="card-body text-warning">
+                    <button type="button" class="btn" style="background-color: #2c2c2c">編集<i class="fas fa-user-edit"></i></button>
+                    <span href="" style="font-size: 28px " class="px-4 text-warning" ><i class="far fa-clock"style="color: #2c2c2c"></i><span style="color: #2c2c2c">給料日:</span>25日</span>
+                    <h1 class="card-text mb-4 py-4"><i class="fas fa-yen-sign"style="color: #2c2c2c"></i>230000</h1>
+                  </div>
               </div>
-                <div class="card-body text-warning">
-                  <button type="button" class="btn" style="background-color: #2c2c2c">編集<i class="fas fa-user-edit"></i></button>
-                  <h1 class="card-text mb-4 py-4">700000<i class="fas fa-yen-sign"style="color: #2c2c2c"></i></h1>
+              <div class="card border-primary mb-3" style="height:350px">
+                <div>
+                  <h3 class="card-header"><i class="fas fa-hand-holding-usd"></i>今月の出費</h3>
+                </div>
+                  <div class="card-body text-warning">
+                    <h5 class="card-title py-3"></h5>
+                    <h1 class="card-text mb-3 py-5"><i class="fas fa-yen-sign" style="color: #2c2c2c"></i>170000</h1>
+                  </div>
               </div>
-            </div>
-            <div class="card border-primary mb-3" style="height:350px">
-              <div>
-                <h3 class="card-header">今月目標貯金<i class="fas fa-user-plus"></i></h3>
-              </div>
-                <div class="card-body text-warning">
-                  <button type="button" class="btn" style="background-color: #2c2c2c">編集<i class="fas fa-user-edit"></i></button>
-                  <h1 class="card-text mb-4 py-4">60000<i class="fas fa-yen-sign"style="color: #2c2c2c"></i></h1>
-              </div>
-            </div>
-            <div class="card border-primary mb-3" style="height:350px">
-              <div>
-                <h3 class="card-header">今月の出費<i class="fas fa-hand-holding-usd"></i></h3>
-              </div>
-                <div class="card-body text-warning">
-                  <h5 class="card-title py-3"></h5>
-                  <h1 class="card-text mb-3 py-5">110000<i class="fas fa-yen-sign" style="color: #2c2c2c"></i></h1>
-              </div>
-            </div>
-            <div class="card border-primary mb-3" style="height:350px">
-              <h3 class="card-header">給料<i class="fas fa-coins"></i></h3>
-                <div class="card-body text-warning">
-                  <button type="button" class="btn" style="background-color: #2c2c2c">編集<i class="fas fa-user-edit"></i></button>
-                  <a href="" style="font-size: 28px" class="px-4 text-warning" >25日</a><i class="far fa-clock"style="color: #2c2c2c"></i>
-                  <h1 class="card-text mb-4 py-4">230000<i class="fas fa-yen-sign"style="color: #2c2c2c"></i></h1>
+              <div class="card border-primary mb-3" style="height:350px">
+                <div>
+                  <h3 class="card-header"><i class="fas fa-user-plus"></i>今月の貯金額</h3>
+                </div>
+                  <div class="card-body text-warning">
+                    <h4  style="color: #2c2c2c"><i class="fas fa-trophy"></i>目標達成率:<span class="text-warning" style="font-size: 36px">200%</span></h4>
+                    <h1 class="card-text mb-4 py-2" style="line-height: 0px"><i class="fas fa-yen-sign"style="color: #2c2c2c"></i>60000</h1>
+                  </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
       <footer class="footer">
         <div class="container-fluid">
           <nav>
@@ -133,6 +135,8 @@
       </footer>
     </div>
   </div>
+  <!-- ラッパー閉じる -->
+
   <!--   Core JS Files   -->
   <script src="../assets/js/core/jquery.min.js"></script>
   <script src="../assets/js/core/popper.min.js"></script>
