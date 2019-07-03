@@ -100,11 +100,12 @@
       .chart-box{position: relative;}
       .chart-row{position:absolute; z-index: 999;right:30px;}
       .b{margin:10px;}
+      .b:hover{background-color: rgba(255,255,255,0.5;)!important}
       </style>
       <div class="chart-box">
         <div class="row chart-row">
-          <button type="button" class="b btn btn-outline-light btn-sm col-auto">Week button</button>
-          <button type="button" class="b btn btn-outline-light btn-sm col-auto">Month button</button>
+          <button type="button" id="w" class="b btn btn-outline-light btn-sm col-auto">Week button</button>
+          <button type="button" id="m" class="b btn btn-outline-light btn-sm col-auto">Month button</button>
         </div>
       </div>
 
@@ -196,10 +197,15 @@
   <script src="../assets/demo/demo.js"></script>
   <script>
     $(document).ready(function() {
-      // Javascript method's body can be found in assets/js/demos.js
-      demo.initDashboardPageChartsMonth();
+      // 初期値は週表示// Javascript method's body can be found in assets/js/demos.js
       demo.initDashboardPageChartsWeek();
     });
+    document.getElementById('m').onclick = function(){
+      demo.initDashboardPageChartsMonth();
+    };
+    document.getElementById('w').onclick = function(){
+      demo.initDashboardPageChartsWeek();
+    };
   </script>
 <!-- ▲milky▲ ******************************************************************************************** -->
 
