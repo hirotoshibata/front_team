@@ -95,10 +95,35 @@
   <div class="main-panel" id="main-panel">
 
 <!-- ▼milky▼ ******************************************************************************************** -->
-      <!-- チャート-->
+      <!-- チャート切り替えボタン-->
+      <style>
+      .chart-box{position: relative;}
+      .chart-row{position:absolute; z-index: 999;right:30px;}
+      .b{margin:10px;}
+      </style>
+      <div class="chart-box">
+        <div class="row chart-row">
+          <button type="button" class="b btn btn-outline-light btn-sm col-auto">Week button</button>
+          <button type="button" class="b btn btn-outline-light btn-sm col-auto">Month button</button>
+        </div>
+      </div>
+
+      <!-- チャート描画-->
       <div class="panel-header panel-header-lg">
         <canvas id="bigDashboardChart"></canvas>
       </div>
+
+      <!-- <div class="card text-center">
+        <div class="card-header">
+          <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item"><a class="nav-link active" href="#">Week</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Month</a></li>
+          </ul>
+        </div>
+        <div class="card-body">
+          <div class="panel-header panel-header-lg"><canvas id="bigDashboardChart"></canvas></div>
+        </div>
+      </div> -->
 <!-- ▲milky▲ ******************************************************************************************** -->
 
       <!-- コンテンツ -->
