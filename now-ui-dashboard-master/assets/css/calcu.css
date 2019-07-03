@@ -3,7 +3,6 @@
 body {
     background-color: black !important;
     font-family: Arial, Helvetica, sans-serif;
-    width: 100%
 }
 
 input[type="button"] {
@@ -39,7 +38,6 @@ input[type="button"] {
 .calc{
     left: 210px;
     top: 45px;
-    width: 100%
 }
 
 input.cbtn-head,
