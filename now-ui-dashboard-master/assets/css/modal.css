@@ -9,47 +9,8 @@ body {
 /* ここまでデモページ用のコード */
 
 /*初期モーダルのコンテンツ設定*/
-#modal-content {
-	width: 50% ;
-	margin: 0 ;
-	padding: 10px 20px ;
+.modal-content {
 	border: 2px solid #aaa ;
-	background: #fff ;
-	position: fixed ;
-	display: none ;
-	z-index: 2 ;
-	left: 338px;
-	top:146px;
-	text-align: center;
-}
-
-/*目標貯金額編集モーダルのコンテンツ設定*/
-#modal-contenta {
-	width: 50% ;
-	margin: 0 ;
-	padding: 10px 20px ;
-	border: 2px solid #aaa ;
-	background: #fff ;
-	position: fixed ;
-	display: none ;
-	z-index: 2 ;
-	left: 338px;
-	top:146px;
-	text-align: center;
-}
-
-#modal-contentb {
-	width: 50% ;
-	margin: 0 ;
-	padding: 10px 20px ;
-	border: 2px solid #aaa ;
-	background: #fff ;
-	position: fixed ;
-	display: none ;
-	z-index: 2 ;
-	left: 338px;
-	top:146px;
-	text-align: center;
 }
 
 #modal-overlay {
