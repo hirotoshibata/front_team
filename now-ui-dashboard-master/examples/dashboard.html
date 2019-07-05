@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+  <!-- ファビコンをナマケモノに変換する。 -->
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
@@ -25,9 +26,10 @@
 <body class="">
   <div class="wrapper ">
 
-
+    <!-- サイドバーがヘッドバーになる設定の実現 -->
+    <!-- 画面サイズが992pxの時にサイドバーは表示されなくなるので、それ以下の時にサイドバーの要素をヘッダーとして表示するという条件を追加する。 -->
     <!-- サイドバー開始 -->
-      <div class="sidebar" data-color="yellow">
+      <header class="sidebar" data-color="yellow">
         <!--
           Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
       -->
@@ -59,8 +61,41 @@
             </li>
           </ul>
         </div>
-      </div>
+      </header>
     <!-- サイドバー終了 -->
+
+
+
+    <!-- headerバーの開始 -->
+    <nav class="navbar navbar-expand-lg navbar-transparent  bg-primary  navbar-absolute">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <div class="navbar-toggle">
+              <button type="button" class="navbar-toggler">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+              </button>
+            </div>
+            <a class="navbar-brand" href="#pablo"></a>
+          </div>
+          <div class="collapse navbar-collapse justify-content-end" id="navigation">
+            <form>
+              <div class="input-group no-border">
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <i class="now-ui-icons ui-1_zoom-bold"></i>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <ul class="navbar-nav">
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+          <!-- headerバーの終了 -->
 
     <!-- ここから初期モーダルウィンドウ -->
               <div id="modal-content">
@@ -114,7 +149,7 @@
             <div class="card-deck">
               <div class="card border-primary mb-3" style="height:350px">
                 <div>
-                  <h3 class="card-header"><i class="fas fa-coins"></i>給料</h3>
+                  <h3 class="card-header"><i class="fas fa-coins"></i>入るお金</h3>
                 </div>
                   <div class="card-body text-warning">
                     <button type="button" class="btn button-linka" style="background-color: #2c2c2c" id="modal-openb">編集<i class="fas fa-user-edit"></i></button>
@@ -124,7 +159,7 @@
               </div>
               <div class="card border-primary mb-3" style="height:350px">
                 <div>
-                  <h3 class="card-header"><i class="fas fa-hand-holding-usd"></i>今月の出費</h3>
+                  <h3 class="card-header"><i class="fas fa-hand-holding-usd"></i>使ったお金</h3>
                 </div>
                   <div class="card-body text-warning">
                     <h5 class="card-title py-3"></h5>
@@ -133,10 +168,10 @@
               </div>
               <div class="card border-primary mb-3" style="height:350px">
                 <div>
-                  <h3 class="card-header"><i class="fas fa-user-plus"></i>今月の貯金額</h3>
+                  <h3 class="card-header"><i class="fas fa-user-plus"></i>貯まってるお金</h3>
                 </div>
                   <div class="card-body text-warning">
-                    <h4  style="color: #2c2c2c"><i class="fas fa-trophy"></i>目標達成率:<span class="text-warning" style="font-size: 36px">200%</span></h4>
+                    <h4  style="color: #2c2c2c"><i class="fas fa-trophy"></i>達成してるよ:<span class="text-warning" style="font-size: 36px">200%</span></h4>
                     <h1 class="card-text mb-4 py-2" style="line-height: 0px"><i class="fas fa-yen-sign"style="color: #2c2c2c"></i>60000</h1>
                   </div>
               </div>

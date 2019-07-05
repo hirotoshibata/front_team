@@ -27,7 +27,7 @@ input[type="button"] {
 }
 
 .table-buttom {
-    width: 330px;
+    width: 350px;
     height: 480px;
     margin: 0 10px 10px 10px;
     text-align: center;
@@ -36,8 +36,10 @@ input[type="button"] {
 }
 
 .calc{
-    left: 210px;
-    top: 45px;
+    width: 350px;
+    height: 570px;
+    left: 300px;
+    top: 100px;
 }
 
 input.cbtn-head,
