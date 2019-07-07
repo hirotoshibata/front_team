@@ -104,8 +104,8 @@
       </style>
       <div class="chart-box">
         <div class="row chart-row">
-          <button type="button" id="w" class="b btn btn-outline-light btn-sm col-auto">Week button</button>
-          <button type="button" id="m" class="b btn btn-outline-light btn-sm col-auto">Month button</button>
+          <button type="button" id="w" class="b btn btn-outline-light btn-sm col-auto">WEEK</button>
+          <button type="button" id="m" class="b btn btn-outline-light btn-sm col-auto">MONTH</button>
         </div>
       </div>
 
@@ -114,17 +114,6 @@
         <canvas id="bigDashboardChart"></canvas>
       </div>
 
-      <!-- <div class="card text-center">
-        <div class="card-header">
-          <ul class="nav nav-tabs card-header-tabs">
-            <li class="nav-item"><a class="nav-link active" href="#">Week</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Month</a></li>
-          </ul>
-        </div>
-        <div class="card-body">
-          <div class="panel-header panel-header-lg"><canvas id="bigDashboardChart"></canvas></div>
-        </div>
-      </div> -->
 <!-- ▲milky▲ ******************************************************************************************** -->
 
       <!-- コンテンツ -->
@@ -166,8 +155,8 @@
         </div>
         <!-- フッター -->
         <footer class="footer">
-        <div class="container-fluid">会社概要:Crazy</div>
-      </footer>
+          <div class="container-fluid">会社概要:Crazy</div>
+        </footer>
 
       </div><!--class="content"-->
 
@@ -191,19 +180,18 @@
   <script src="../assets/demo/demo.js"></script>
   <script>
     $(document).ready(function() {
-      // 初期値は週表示// Javascript method's body can be found in assets/js/demos.js
-      demo.initDashboardPageChartsWeek();
-
-      document.getElementById('m').onclick = function(){
-        demo.initDashboardPageChartsMonth();
-      };
-
+      // default
+      // demo.initDashboardPageChartsWeek();
+      initDashboardPageChartsWeek();
+      // Week
       document.getElementById('w').onclick = function(){
-        demo.initDashboardPageChartsWeek();
+        chnageWeekChart(myChart);
       };
-
-    });
-
+      // Month
+      document.getElementById('m').onclick = function(){
+        changeMonthChart(myChart);
+      };
+    });//jquery
   </script>
 <!-- ▲milky▲ ******************************************************************************************** -->
 
