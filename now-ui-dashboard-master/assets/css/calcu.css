@@ -118,7 +118,9 @@ input.cbtn-zero {
 
 .btn-gradient-radius:active {
   /*ボタンを押したとき*/
-  -webkit-transform: translateY(4px);
-  transform: translateY(4px);/*下に動く*/
-  border-bottom: none;/*線を消す*/
+    padding-top: 6px;
+    padding-bottom: 4px;
+    border: 1px solid #334c66;
+    background-color: rgb(226, 123, 5);
+    color: #e0ebf5;
 }
