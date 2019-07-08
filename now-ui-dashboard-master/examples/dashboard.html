@@ -89,20 +89,20 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <!-- モーダルウィンドウのコンテンツ開始 -->
+
           <h3>
             <i class="fas fa-trophy"></i>
-            貯めたいお金(月)<br><input type="text">円
+            貯めたいお金(月)<br>
+            <input type="text">円
           </h3>
+
           <h3>
             <i class="fas fa-coins"></i>
             入ったお金(月)
             <input type="text">円
           </h3>
-          <p>
-            <button class="modal-close" class="button-link">
-              完了
-            </button>
-          </p>
+
+          <p><button class="modal-close" class="button-link">完了</button></p>
           <!-- モーダルウィンドウのコンテンツ終了 -->
         </div>
       </div>
@@ -140,16 +140,15 @@
     </div> -->
     <!-- 給料編集モーダルウィンドウ終わり -->
 
-
-    <div class="main-panel" id="main-panel">
-
+<!-- メインパネル -->
+<div class="main-panel" id="main-panel">
 
       <!-- チャート切り替えボタン-->
       <style>
-      .chart-box{position: relative;}
-      .chart-row{position:absolute; z-index: 999;right:30px;}
-      .b{margin:10px;}
-      .b:hover{background-color: rgba(255,255,255,0.5;)!important}
+        .chart-box{position: relative;}
+        .chart-row{position:absolute; z-index: 999;right:30px;}
+        .b{margin:10px;}
+        .b:hover{background-color: rgba(255,255,255,0.5;)!important}
       </style>
       <div class="chart-box">
         <div class="row chart-row">
@@ -163,68 +162,43 @@
         <canvas id="bigDashboardChart"></canvas>
       </div>
 
-
-
-
     <!-- コンテンツ カードの配置-->
     <div class="container-fluid content">
-      <!-- <div class="row"> -->
-        <!-- <div class="col-12"> -->
-          <div class="row mb-3">
-            <div class="col-lg-4">
-              <div class="card">
-                <h3 class="card-header">
-                  <i class="fas fa-coins"></i>
-                  入ったお金
-                </h3>
-                <div class="card-body text-warning">
-                  <h5 class="card-title py-3"></h5>
-                  <p class="card-text py-5">
-                    <i class="fas fa-yen-sign text-black"></i>
-                    230000
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="card">
-                <h3 class="card-header">
-                  <i class="fas fa-hand-holding-usd"></i>
-                  使ったお金
-                </h3>
-                <div class="card-body text-warning">
-                  <h5 class="card-title py-3"></h5>
-                  <p class="card-text py-5">
-                    <i class="fas fa-yen-sign text-black"></i>
-                    170000
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="card">
-                <h3 class="card-header">
-                  <i class="fas fa-user-plus"></i>
-                  自由に使えるお金
-                </h3>
-                <div class="card-body text-warning">
-                  <h5 class="card-title py-3"></h5>
-                  <p class="card-text py-5">
-                    <i class="fas fa-yen-sign text-black"></i>
-                    30000
-                  </p>
-                </div>
-              </div>
+      <div class="row mb-3">
+        <div class="col-lg-4">
+          <div class="card">
+            <h3 class="card-header"><i class="fas fa-coins"></i>入ったお金</h3>
+            <div class="card-body text-warning">
+              <h5 class="card-title py-3"></h5>
+              <p class="card-text py-5"><i class="fas fa-yen-sign text-black"></i>230000</p>
             </div>
           </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card">
+            <h3 class="card-header"><i class="fas fa-hand-holding-usd"></i>使ったお金</h3>
+            <div class="card-body text-warning">
+              <h5 class="card-title py-3"></h5>
+              <p class="card-text py-5"><i class="fas fa-yen-sign text-black"></i>170000</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card">
+            <h3 class="card-header"><i class="fas fa-user-plus"></i>自由に使えるお金</h3>
+            <div class="card-body text-warning">
+              <h5 class="card-title py-3"></h5>
+              <p class="card-text py-5"><i class="fas fa-yen-sign text-black"></i>30000</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-        <!-- </div> -->
-      <!-- </div> -->
       <!-- フッター -->
       <footer class="footer">
         <div class="container-fluid">会社概要:Crazy</div>
-       </footer>
-    </div>
+      </footer>
 
 
   </div><!--class="main-panel" id="main-panel"-->
@@ -244,7 +218,7 @@
   <script src="../assets/js/plugins/chartjs.min.js"></script>
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script> -->
 
-  <script src="../assets/demo/demo.js"></script>
+  <script src="../assets/data/data.js"></script>
   <script>
     $(document).ready(function() {
       // default
