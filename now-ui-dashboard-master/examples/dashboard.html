@@ -35,13 +35,17 @@
       <div class="sidebar-wrapper" id="sidebar-wrapper">
         <ul class="nav">
           <li style="border-bottom: solid 1px white">
-            <a data-toggle="modal" data-target="#modal-1">
-              <h3><i class="now-ui-icons users_single-02"></i>ミルキー</h3>
-              <h3><i class="fas fa-trophy"></i>今月の目標貯金額</h3>
-              <h1><i class="fas fa-yen-sign"></i>30000</h1>
+              <h5><i class="now-ui-icons users_single-02"></i></h5>
+              <h5 style="color: white">貯めたいお金</h5>
+              <h1 style="color: white"><i class="fas fa-yen-sign"></i>30000</h1>
+          </li>
+          <li >
+            <a data-toggle="modal" data-target="#modal-1" id="modal-open">
+              <i class="fas fa-user-edit"></i>
+              <p>データ編集</p>
             </a>
           </li>
-          <li class="active">
+          <li >
             <a href="./dashboard.html">
               <i class="now-ui-icons design_app"></i>
               <p>ホーム画面</p>
@@ -88,25 +92,22 @@
     </nav>
     <!-- headerバーの終了 -->
 
-    <!-- ここから初期モーダルウィンドウ -->
+<!-- 編集モーダルの完了ボタンを押しても画面を閉じる事ができない。
+ボタンにはしっかりとmodal-closeが設定されているしaタブに新しくモーダルopenを設定することもした。jsが起動し始める為にはmodalopenが必要だと思ったがそれでもダメだっった。先生が新しくいれて下さっているデータトグルを追加した意味などを理解出来ると分かるのかなと思った。 -->
+
+    <!-- ここから初期・編集モーダルウィンドウ -->
     <div class="modal fade" id="modal-1">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <!-- モーダルウィンドウのコンテンツ開始 -->
           <h3>
             <i class="fas fa-trophy"></i>
-            目標貯金額(月)
-            <input type="text">円
+            貯めたいお金(月)<br><input type="text">円
           </h3>
           <h3>
             <i class="fas fa-coins"></i>
-            給料(月)
+            入ったお金(月)
             <input type="text">円
-          </h3>
-          <h3>
-            <i class="far fa-clock text-black"></i>
-            給料日
-            <input type="text">日
           </h3>
           <p>
             <button class="modal-close" class="button-link">
@@ -116,35 +117,38 @@
           <!-- モーダルウィンドウのコンテンツ終了 -->
         </div>
       </div>
-
     </div>
     <!-- 初期モーダルウィンドウ終わり -->
 
+
+
     <!-- ここから目標貯金額編集モーダルウィンドウ -->
-    <div class="modal fade" id="modal-2">
+    <!-- <div class="modal fade" id="modal-2">
       <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
+        <div class="modal-content"> -->
           <!-- モーダルウィンドウのコンテンツ開始 -->
-          <h3><i class="fas fa-trophy"></i>目標貯金額(月) <input type="text">円</h3>
-          <p><button class="modal-close" class="button-link">編集</button></p>
+          <!-- <h3><i class="fas fa-trophy"></i>目標貯金額(月) <input type="text">円</h3>
+          <p><button class="modal-close" class="button-link">編集</button></p> -->
           <!-- モーダルウィンドウのコンテンツ終了 -->
-        </div>
+        <!-- </div>
       </div>
-    </div>
+    </div> -->
     <!-- 目標貯金額編集モーダルウィンドウ終わり -->
 
+
+
     <!-- ここから給料編集モーダルウィンドウ -->
-    <div class="modal fade" id="modal-3">
+    <!-- <div class="modal fade" id="modal-3">
       <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
+        <div class="modal-content"> -->
           <!-- モーダルウィンドウのコンテンツ開始 -->
-          <h3><i class="fas fa-coins"></i>給料(月)<input type="text">円</h3>
+          <!-- <h3><i class="fas fa-coins"></i>給料(月)<input type="text">円</h3>
           <h3><i class="far fa-clock text-black"></i>給料日<input type="text">日</h3>
-          <p><button class="modal-close" class="button-link">編集</button></p>
+          <p><button class="modal-close" class="button-link">編集</button></p> -->
           <!-- モーダルウィンドウのコンテンツ終了 -->
-        </div>
+        <!-- </div>
       </div>
-    </div>
+    </div> -->
     <!-- 給料編集モーダルウィンドウ終わり -->
 
 
@@ -157,7 +161,9 @@
     </div>
     <!-- ▲milky▲ ******************************************* -->
 
-    <!-- コンテンツ -->
+
+
+    <!-- コンテンツ カードの配置-->
     <div class="container-fluid content">
       <!-- <div class="row"> -->
         <!-- <div class="col-12"> -->
@@ -166,19 +172,11 @@
               <div class="card">
                 <h3 class="card-header">
                   <i class="fas fa-coins"></i>
-                  入るお金
+                  入ったお金
                 </h3>
                 <div class="card-body text-warning">
-                  <button type="button" class="btn button-linka bg-black" data-toggle="modal" data-target="#modal-2">
-                    編集
-                    <i class="fas fa-user-edit"></i>
-                  </button>
-                  <span class="px-4 text-warning">
-                    <i class="far fa-clock text-black"></i>
-                    <span class="text-black">
-                      給料日:</span>25日
-                  </span>
-                  <p class="card-text py-4">
+                  <h5 class="card-title py-3"></h5>
+                  <p class="card-text py-5">
                     <i class="fas fa-yen-sign text-black"></i>
                     230000
                   </p>
@@ -204,17 +202,13 @@
               <div class="card">
                 <h3 class="card-header">
                   <i class="fas fa-user-plus"></i>
-                  貯まってるお金
+                  自由に使えるお金
                 </h3>
                 <div class="card-body text-warning">
-                  <h5 class="text-black">
-                    <i class="fas fa-trophy"></i>
-                    達成してるよ:
-                    <span class="text-warning">200%</span>
-                  </h5>
-                  <p class="card-text py-2">
+                  <h5 class="card-title py-3"></h5>
+                  <p class="card-text py-5">
                     <i class="fas fa-yen-sign text-black"></i>
-                    60000
+                    30000
                   </p>
                 </div>
               </div>

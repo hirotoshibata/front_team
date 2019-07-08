@@ -104,3 +104,21 @@ input.cbtn-zero {
     -moz-box-shadow: inset 0px 0px 2px rgb(228, 147, 55);
     box-shadow: inset 0px 0px 2px rgb(228, 147, 55); */
 }
+
+.btn-gradient-radius {
+  display: inline-block;
+  padding: 7px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  color: #FFF;
+  background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+  transition: .4s;
+}
+
+
+.btn-gradient-radius:active {
+  /*ボタンを押したとき*/
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  border-bottom: none;/*線を消す*/
+}
